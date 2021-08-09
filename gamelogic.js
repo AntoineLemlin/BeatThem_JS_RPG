@@ -214,7 +214,7 @@ submitChar.addEventListener("click", function () {
 
     visual[
       currentPlayer
-    ].src = `../img/${characters[currentPlayer].race}_Idle.gif`;
+    ].src = `./img/${characters[currentPlayer].race}_Idle.gif`;
 
     modalCreate.style.visibility = "hidden";
     resetInputs();
