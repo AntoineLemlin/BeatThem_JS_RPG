@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon/vs.png" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Beat them</title>
+</head>
+<body>
+    <header>
+        <h1>Beath them</h1>
+    </header>
+    <main>
+        <h2 id="comment">Player 1's turn</h2>
+        <div class="players">
+            <div class="player1" id="player1">
+                <div class="vs-box fighter1">
+                    <div class="dialogBox"><p></p></div>
+                    <div class="visual"><img id="visual" src="https://carbonmade-media.accelerator.net/32507107;original.gif" alt=""></div>
+                    <div class="health-bar"><div class="bar"></div></div>
+                    <h3 class="nameFighter">Fighter 01</h3>
+                    <div class="abilities">
+                        <h4 class="raceFighter">Race</h4>
+                        <h4 class="itemFighter">Item</h4>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li class="hit"><a onclick="return false" href="#">Hit</a></li>
+                    <li class="heal"><a onclick="return false" href="#">Heal</a></li>
+                    <li class="yield"><a onclick="return false" href="#">Yield</a></li>
+                </ul>
+            </div>
+            <div class="player2" id="player2">
+                <div class="vs-box fighter2">
+                    <div class="dialogBox"><p></p></div>
+                    <div id="p2-visual" class="visual"><img id="visual" src="https://cdnb.artstation.com/p/assets/images/images/026/411/923/original/aniek-janssen-fighter-1.gif?1588707929" alt=""></div>
+                    <div class="health-bar"><div class="bar"></div></div>
+                    <h3 class="nameFighter">Fighter 02</h3>
+                    <div class="abilities">
+                        <h4 class="raceFighter">Race</h4>
+                        <h4 class="itemFighter">Item</h4>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li class="hit"><a onclick="return false" href="#">Hit</a></li>
+                    <li class="heal"><a onclick="return false" href="#">Heal</a></li>
+                    <li class="yield"><a onclick="return false" href="#">Yield</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="log">
+            <h3 class="log-title">Log of the game</h3>
+            <template>
+                <div class="event"><h4>Fighter 01</h4><p>made an attack</p></div>
+            </template>
+        </div>
+
+        <div class="creation-panel-modal">
+            <h2>Create your character</h2>
+            <form action="">
+                <label for="fname">Name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="type your name"><br>
+                <label for="race">Race:</label><br>
+                <select name="race" id="race-select">
+                    <option value="">--Please choose a race--</option>
+                    <option value="Human">Human</option>
+                    <option value="Orc">Orc</option>
+                    <option value="Elf">Elf</option>
+                    <option value="Vampire">Vampire</option>
+                </select>
+
+                <label for="item">Item:</label><br>
+                <select name="item" id="item-select">
+                    <option value="">--Please choose an item--</option>
+                    <option value="Boots">Boots</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Sword">Sword</option>
+                    <option value="Bow">Bow</option>
+                </select>
+                <input id="submitChar" onclick="return false" class="submit" type="submit" value="Submit">
+              </form>
+        </div>
+
+        <div class="victory-panel-modal">
+            <h2>The player 1 wins</h2>
+            <a onclick="return false" id="restart" href="#">Restart?</a>
+        </div>
+
+    </main>
+
+    <script src="gamelogic.js"></script>
+    <script src="character.js"></script>
+</body>
+</html>
